@@ -2,11 +2,13 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import ReadStory from "../components/Stories/ReadStory";
+import Features from "../components/Features/SomeFeatures";
 
 import classes from "../sass/pages/Home.module.scss";
 
 import homeSectionData from "../dev-data/assets/home/mobile/Section1_data.json";
 import readStoryData from "../dev-data/assets/home/mobile/read-story.json";
+import someFeaturesData from "../dev-data/assets/home/mobile/some_features.json";
 
 const Home = () => {
 	useEffect(() => {
@@ -69,7 +71,13 @@ const Home = () => {
 		<main className={classes.home}>
 			{homeSection}
 
-			<ReadStory list={readStoryData} />
+			<div className={classes["home__posts"]}>
+				<ReadStory list={readStoryData} />
+			</div>
+
+			<div className={classes["home__features"]}>
+				<Features list={someFeaturesData} />
+			</div>
 		</main>
 	);
 };
