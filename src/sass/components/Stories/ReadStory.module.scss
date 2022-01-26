@@ -1,0 +1,50 @@
+.story {
+	height: 37.5rem;
+	padding: {
+		top: 23.6rem;
+		left: 3.3rem;
+		right: 3.2rem;
+		bottom: 4rem;
+	}
+	color: white;
+
+	&_date {
+		font-size: 1.3rem;
+		margin-bottom: 0.4rem;
+		opacity: 0.9;
+	}
+
+	&_title {
+		font-size: 1.8rem;
+		line-height: 2.5rem;
+		font-weight: 700;
+		margin-bottom: 0.4rem;
+	}
+
+	&_author {
+		font-size: 1.3rem;
+		margin-bottom: 1.6rem;
+		opacity: 0.9;
+	}
+
+	&_line {
+		width: 100%;
+		border-bottom: 0.1rem solid white;
+		margin-bottom: 2rem;
+	}
+
+	&_actions {
+		cursor: pointer;
+		display: flex;
+		justify-content: space-between;
+		text-decoration: none;
+		color: inherit;
+
+		&--title {
+			font-size: 1.2rem;
+			text-transform: uppercase;
+			letter-spacing: 0.2rem;
+			font-weight: 700;
+		}
+	}
+}

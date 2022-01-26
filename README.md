@@ -18,7 +18,7 @@ The user should be able to:
 - Scss
 - Html
 
-## Screenshot
+## Design
 
 ![Design preview for the Photosnap Website coding challenge](./src/dev-data/preview.jpg)
 

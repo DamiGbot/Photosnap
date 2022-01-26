@@ -1,0 +1,26 @@
+[
+	{
+		"id": "read_story_1",
+		"title": "The Mountains",
+		"author": "John Appleseed",
+		"images": "mountains.jpg"
+	},
+	{
+		"id": "read_story_2",
+		"title": "Sunset Cityscapes",
+		"author": "Benjamin Cruz",
+		"images": "cityscapes.jpg"
+	},
+	{
+		"id": "read_story_3",
+		"title": "18 Days Voyage",
+		"author": "Alexei Borodin",
+		"images": "18-days-voyage.jpg"
+	},
+	{
+		"id": "read_story_4",
+		"title": "Architecturals",
+		"author": "Samantha Brooke",
+		"images": "architecturals.jpg"
+	}
+]
