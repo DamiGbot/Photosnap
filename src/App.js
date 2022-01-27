@@ -11,12 +11,12 @@ const Pricing = React.lazy(() => import("./pages/Pricing"));
 function App() {
 	return (
 		<Layout>
-			<Switch>
-				<Route path={"/"} exact>
-					<Redirect to={"/home"} />
-				</Route>
+			<Suspense fallback={<div>Loading...</div>}>
+				<Switch>
+					<Route path={"/"} exact>
+						<Redirect to={"/home"} />
+					</Route>
 
-				<Suspense fallback={<div>Loading...</div>}>
 					<Route path="/home">
 						<Home />
 					</Route>
@@ -32,10 +32,12 @@ function App() {
 					<Route path="/pricing">
 						<Pricing />
 					</Route>
-				</Suspense>
 
-				<Route path={"*"}>{/* created a not found page */}</Route>
-			</Switch>
+					<Route path={"*"}>
+						<Redirect to={"/home"} />
+					</Route>
+				</Switch>
+			</Suspense>
 		</Layout>
 	);
 }

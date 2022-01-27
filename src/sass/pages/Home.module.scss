@@ -1,3 +1,5 @@
+@use "../abtracts/mixin" as mixins;
+
 .home {
 	&__hero-image {
 		height: 29.4rem;
@@ -36,17 +38,10 @@
 		}
 
 		&--action {
-			text-transform: uppercase;
-			text-decoration: none;
-			color: white;
-			letter-spacing: 0.2rem;
-			font-size: 1.2rem;
-			font-weight: 700;
+			@include mixins.links;
 
 			&_arrow {
-				margin-left: 1.8rem;
-				transform: translateY(0.25rem);
-				stroke: #d8d8d8;
+				@include mixins.center-arrow(1.8rem, 0.25rem);
 			}
 		}
 
