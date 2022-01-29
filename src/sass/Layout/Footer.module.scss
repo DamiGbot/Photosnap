@@ -20,13 +20,7 @@
 				height: 2rem;
 				cursor: pointer;
 
-				&:hover {
-					transform: scale(1.1);
-				}
-
-				&:active {
-					transform: scale(0.98);
-				}
+				@include mixins.button-click;
 			}
 		}
 	}

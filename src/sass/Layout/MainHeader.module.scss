@@ -1,3 +1,5 @@
+@use "../abtracts/mixin" as mixins;
+
 .main-header {
 	background-color: #ffffff;
 	height: 7.2rem;
@@ -30,33 +32,21 @@
 			&--burger {
 				&_top {
 					top: 0;
-
-					transition: all 0.35s ease-in-out;
-
-					width: 100%;
-					position: absolute;
-					width: 100%;
-					height: 0.2rem;
-					background-color: #000;
+					@include mixins.transition;
+					@include mixins.menu-burger-line;
 				}
 
 				&_bottom {
 					bottom: 0;
-
-					transition: all 0.35s ease-in-out;
-
-					width: 100%;
-					position: absolute;
-					width: 100%;
-					height: 0.2rem;
-					background-color: #000;
+					@include mixins.transition;
+					@include mixins.menu-burger-line;
 				}
 			}
 		}
 	}
 
 	&__menu-options {
-		transition: all 0.35s ease-in-out;
+		@include mixins.transition;
 
 		background-color: #ffffff;
 		width: 100%;

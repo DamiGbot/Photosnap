@@ -18,3 +18,25 @@
 	transform: translateY($translate);
 	stroke: #d8d8d8;
 }
+
+@mixin transition {
+	transition: all 0.35s ease-in-out;
+}
+
+@mixin menu-burger-line {
+	width: 100%;
+	position: absolute;
+	width: 100%;
+	height: 0.2rem;
+	background-color: #000;
+}
+
+@mixin button-click {
+	&:hover {
+		transform: scale(1.1);
+	}
+
+	&:active {
+		transform: scale(0.98);
+	}
+}
