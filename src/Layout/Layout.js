@@ -4,11 +4,7 @@ import Footer from "./Footer";
 
 const Layout = (props) => {
 	return (
-		<div
-			style={{
-				position: "relative",
-			}}
-		>
+		<div>
 			<MainHeader />
 			{props.children}
 			<Footer />
