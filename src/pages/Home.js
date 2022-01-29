@@ -14,6 +14,7 @@ import Arrow from "../components/UI/Arrow";
 const Home = () => {
 	useEffect(() => {
 		document.title = "Photosnap | Home";
+		window.scrollTo(0, 0);
 	}, []);
 
 	const homeSection = useMemo(
