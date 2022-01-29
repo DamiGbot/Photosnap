@@ -1,0 +1,61 @@
+@use "../abtracts/mixin" as mixins;
+
+.stories {
+	&-section1 {
+		&__hero-image {
+			background: url("../../dev-data/assets/stories/mobile/moon-of-appalacia.jpg")
+				no-repeat 50%;
+			background-size: cover;
+			height: 31.7rem;
+		}
+
+		&__content {
+			background-color: #000;
+			padding: 4.8rem 2.8rem;
+			color: white;
+
+			&--award {
+				text-transform: uppercase;
+				font-size: 1.2rem;
+				font-weight: bold;
+				letter-spacing: 0.2rem;
+				margin-bottom: 1.6rem;
+			}
+
+			&--title {
+				font-size: 3.2rem;
+				font-weight: 700;
+				line-height: 4rem;
+				letter-spacing: 0.333rem;
+				margin-bottom: 1.6rem;
+			}
+
+			&--author {
+				font-size: 1.3rem;
+				margin-bottom: 2.4rem;
+
+				&--date {
+					opacity: 0.7;
+					margin-right: 0.9rem;
+				}
+			}
+
+			&--body {
+				opacity: 0.7;
+				font-size: 1.5rem;
+				line-height: 2.5rem;
+				margin-bottom: 2.4rem;
+			}
+
+			&__actions {
+				&--action {
+					@include mixins.links;
+
+					&_arrow {
+						@include mixins.center-arrow(2.2rem, 0.2rem);
+					}
+				}
+			}
+		}
+	}
+}
