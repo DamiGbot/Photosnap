@@ -46,7 +46,7 @@
 	}
 
 	&__menu-options {
-		@include mixins.transition;
+		@include mixins.transition(transform);
 
 		background-color: #ffffff;
 		width: 100%;

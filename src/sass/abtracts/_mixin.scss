@@ -19,8 +19,8 @@
 	stroke: #d8d8d8;
 }
 
-@mixin transition {
-	transition: all 0.35s ease-in-out;
+@mixin transition($element: all) {
+	transition: $element 0.35s ease-in-out;
 }
 
 @mixin menu-burger-line {
