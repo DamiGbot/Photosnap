@@ -36,6 +36,10 @@
 		text-decoration: none;
 		color: inherit;
 
+		&--arrow {
+			stroke: white;
+		}
+
 		&--title {
 			font-size: 1.2rem;
 			text-transform: uppercase;

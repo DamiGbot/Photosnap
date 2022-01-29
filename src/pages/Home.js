@@ -9,6 +9,7 @@ import classes from "../sass/pages/Home.module.scss";
 import homeSectionData from "../dev-data/assets/home/mobile/Section1_data.json";
 import readStoryData from "../dev-data/assets/home/mobile/read-story.json";
 import someFeaturesData from "../dev-data/assets/home/mobile/some_features.json";
+import Arrow from "../components/UI/Arrow";
 
 const Home = () => {
 	useEffect(() => {
@@ -51,19 +52,11 @@ const Home = () => {
 							}`}
 						>
 							{el.Dark ? "Get an invite" : "View the stories"}
-							<svg
+							<Arrow
 								className={`${classes["home__stories--action_arrow"]}  ${
 									!el.Dark ? classes["home__stories-white--action_arrow"] : null
 								}`}
-								width="42"
-								height="14"
-								viewBox="0 0 42 14"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-								<path d="M0 7H41.864" />
-								<path d="M35.4282 1L41.4282 7L35.4282 13" />
-							</svg>
+							/>
 						</Link>
 					</div>
 				</React.Fragment>

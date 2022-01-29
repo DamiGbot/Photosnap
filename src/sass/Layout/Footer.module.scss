@@ -39,10 +39,10 @@
 	&__actions {
 		&--action {
 			@include mixins.links;
-		}
 
-		&--action_arrow {
-			@include mixins.center-arrow(2.2rem, 0.2rem);
+			&_arrow {
+				@include mixins.center-arrow(2.2rem, 0.2rem);
+			}
 		}
 
 		&--copyright {
