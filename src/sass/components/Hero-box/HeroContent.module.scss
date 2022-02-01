@@ -36,10 +36,11 @@
 			font-size: 1.5rem;
 			color: #dfdfdf;
 			line-height: 2.5rem;
-			margin-bottom: 2.4rem;
 		}
 
 		&__actions {
+			margin-top: 2.4rem;
+
 			&--action {
 				@include mixins.links;
 			}
