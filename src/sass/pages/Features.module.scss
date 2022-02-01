@@ -1,0 +1,59 @@
+@use "../abtracts/mixin" as mixins;
+
+.feature {
+	&-section1 {
+		&__hero-image {
+			height: 29.4rem;
+		}
+
+		&__stories {
+			position: relative;
+			padding: {
+				left: 2.9rem;
+				top: 7.2rem;
+				right: 2.4rem;
+				bottom: 2.8rem;
+			}
+
+			&::before {
+				@include mixins.before-line-gradient;
+			}
+
+			&--action {
+				@include mixins.links;
+
+				&_arrow {
+					@include mixins.center-arrow(1.8rem, 0.25rem);
+				}
+			}
+		}
+	}
+
+	&__features {
+		padding: {
+			top: 6.4rem;
+			left: 3.3rem;
+			right: 3.2rem;
+			bottom: 9.1rem;
+		}
+	}
+
+	&_image {
+		position: relative;
+		background: url("../../dev-data/assets/shared/mobile/bg-beta.jpg");
+		padding: {
+			top: 6.4rem;
+			bottom: 6.4rem;
+			left: 3.3rem;
+			right: 3.2rem;
+		}
+
+		&::before {
+			@include mixins.before-line-gradient;
+		}
+
+		&_arrow {
+			@include mixins.center-arrow(1.8rem, 0.25rem);
+		}
+	}
+}
