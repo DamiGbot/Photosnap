@@ -40,3 +40,17 @@
 		transform: scale(0.98);
 	}
 }
+
+@mixin before-line-gradient {
+	content: "";
+	position: absolute;
+	width: 12.8rem;
+	height: 0.6rem;
+	background: linear-gradient(
+		26.57deg,
+		#ffc593 0.42%,
+		#bc7198 43.46%,
+		#5a77ff 83.33%
+	);
+	top: 0;
+}
