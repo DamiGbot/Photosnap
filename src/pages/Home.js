@@ -1,15 +1,15 @@
 import React, { useEffect, useMemo } from "react";
 
 import ReadStory from "../components/Stories/ReadStory";
-import Features from "../components/Features/SomeFeatures";
+import SomeFeatures from "../components/Features/SomeFeatures";
 import HeroImage from "../components/Hero-box/HeroImage";
 import HeroContent from "../components/Hero-box/HeroContent";
 
 import classes from "../sass/pages/Home.module.scss";
 
-import homeSectionData from "../dev-data/assets/home/mobile/Section1_data.json";
-import readStoryData from "../dev-data/assets/home/mobile/read-story.json";
-import someFeaturesData from "../dev-data/assets/home/mobile/some_features.json";
+import homeSectionData from "../dev-data/assets/home/Section1_data.json";
+import readStoryData from "../dev-data/assets/home/read-story.json";
+import someFeaturesData from "../dev-data/assets/home/some_features.json";
 
 const Home = () => {
 	useEffect(() => {
@@ -53,7 +53,7 @@ const Home = () => {
 			</section>
 
 			<section className={classes["home__features"]}>
-				<Features list={someFeaturesData} />
+				<SomeFeatures list={someFeaturesData} />
 			</section>
 		</main>
 	);
