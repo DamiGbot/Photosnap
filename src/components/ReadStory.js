@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import classes from "../../sass/components/Stories/ReadStory.module.scss";
-import Arrow from "../UI/Arrow";
+import classes from "../sass/components/Stories/ReadStory.module.scss";
+import Arrow from "./UI/Arrow";
 
 const ReadStory = (props) => {
 	return (
@@ -12,7 +12,7 @@ const ReadStory = (props) => {
 					key={el.id}
 					className={classes.story}
 					style={{
-						background: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)), url(${require(`../../dev-data/assets/stories/mobile/${el.images}`)}) no-repeat 50%`,
+						background: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)), url(${require(`../dev-data/assets/stories/mobile/${el.images}`)}) no-repeat 50%`,
 						backgroundSize: "cover",
 					}}
 				>

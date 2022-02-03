@@ -1,6 +1,6 @@
 import React from "react";
 
-import classes from "../../sass/components/Features/SomeFeatures.module.scss";
+import classes from "../sass/components/Features/SomeFeatures.module.scss";
 
 const SomeFeatures = (props) => {
 	return (
@@ -9,7 +9,7 @@ const SomeFeatures = (props) => {
 				<div className={classes.features} key={el.id}>
 					<img
 						alt=""
-						src={require(`../../dev-data/assets/features/${el.svg}`)}
+						src={require(`../dev-data/assets/features/${el.svg}`)}
 						className={classes["features__svg"]}
 					/>
 

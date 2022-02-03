@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo } from "react";
 
-import ReadStory from "../components/Stories/ReadStory";
-import SomeFeatures from "../components/Features/SomeFeatures";
+import ReadStory from "../components/ReadStory";
+import SomeFeatures from "../components/SomeFeatures";
 import HeroImage from "../components/Hero-box/HeroImage";
 import HeroContent from "../components/Hero-box/HeroContent";
 
