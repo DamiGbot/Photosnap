@@ -11,8 +11,8 @@
 			padding: {
 				left: 2.9rem;
 				top: 7.2rem;
-				right: 2.4rem;
-				bottom: 2.8rem;
+				right: 2.8rem;
+				bottom: 7.2rem;
 			}
 
 			&::before {
@@ -39,14 +39,7 @@
 	}
 
 	&_image {
-		position: relative;
-		background: url("../../dev-data/assets/shared/mobile/bg-beta.jpg");
-		padding: {
-			top: 6.4rem;
-			bottom: 6.4rem;
-			left: 3.3rem;
-			right: 3.2rem;
-		}
+		@include mixins.background-image-above-footer;
 
 		&::before {
 			@include mixins.before-line-gradient;

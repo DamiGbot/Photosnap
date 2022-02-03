@@ -54,3 +54,16 @@
 	);
 	top: 0;
 }
+
+@mixin background-image-above-footer {
+	position: relative;
+	background: url("../../dev-data/assets/shared/mobile/bg-beta.jpg") no-repeat
+		50%;
+	background-size: cover;
+	padding: {
+		top: 6.4rem;
+		bottom: 6.4rem;
+		left: 3.3rem;
+		right: 3.2rem;
+	}
+}
