@@ -1,0 +1,43 @@
+@use "../abtracts/mixin" as mixins;
+
+.layout {
+	&-section1 {
+		&__hero-image {
+			height: 29.4rem;
+		}
+
+		&__stories {
+			position: relative;
+			padding: {
+				left: 2.9rem;
+				top: 7.2rem;
+				right: 2.8rem;
+				bottom: 7.2rem;
+			}
+
+			&::before {
+				@include mixins.before-line-gradient;
+			}
+
+			&--action {
+				@include mixins.links;
+
+				&_arrow {
+					@include mixins.center-arrow(1.8rem, 0.25rem);
+				}
+			}
+		}
+	}
+
+	&_image {
+		@include mixins.background-image-above-footer;
+
+		&::before {
+			@include mixins.before-line-gradient;
+		}
+
+		&_arrow {
+			@include mixins.center-arrow(1.8rem, 0.25rem);
+		}
+	}
+}
