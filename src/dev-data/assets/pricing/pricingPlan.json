@@ -1,0 +1,21 @@
+[
+	{
+		"id": "plan1",
+		"title": "Basic",
+		"body": "Includes basic usage of our platform. Recommended for new and aspiring photographers.",
+		"amount": "19.00"
+	},
+	{
+		"id": "plan2",
+		"title": "Pro",
+		"body": "More advanced features available. Recommended for photography veterans and professionals.",
+		"amount": "39.00",
+		"dark": true
+	},
+	{
+		"id": "plan3",
+		"title": "Business",
+		"body": "Additional features available such as more detailed metrics. Recommended for business owners.",
+		"amount": "99.00"
+	}
+]
