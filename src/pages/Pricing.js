@@ -2,10 +2,12 @@ import { useEffect, useState } from "react";
 
 import FeaturePricingLayout from "../components/FeaturePricingLayout";
 import PricingPlan from "../components/PricingPlan";
+import PlansFeatures from "../components/PlansFeatures";
 
 import classes from "../sass/pages/Pricing.module.scss";
 
 import pricingPlanData from "../dev-data/assets/pricing/pricingPlan.json";
+import featuresAvailableData from "../dev-data/assets/pricing/featuresAvailable.json";
 
 const Pricing = () => {
 	const [isYearly, setIsYearly] = useState(false);
@@ -30,6 +32,15 @@ const Pricing = () => {
 	const switchPlanHandler = () => {
 		setIsYearly(!isYearly);
 	};
+
+	const featuresAvailable = featuresAvailableData.map((feature) => (
+		<PlansFeatures
+			title={feature.title}
+			basicAvailable={feature.basic}
+			proAvailable={feature.pro}
+			businessAvailable={feature.business}
+		/>
+	));
 
 	return (
 		<FeaturePricingLayout
@@ -73,7 +84,18 @@ const Pricing = () => {
 					</p>
 				</div>
 
-				{pricing}
+				<div className={classes["pricing__subscription--prices"]}>
+					{pricing}
+				</div>
+			</section>
+
+			<section className={classes["pricing__features"]}>
+				<h3 className={classes["pricing__features--title"]}>
+					{"The features".toUpperCase()}
+				</h3>
+				<div className={classes["pricing__features--line"]}></div>
+
+				<div>{featuresAvailable}</div>
 			</section>
 		</FeaturePricingLayout>
 	);

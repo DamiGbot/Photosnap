@@ -1,0 +1,48 @@
+[
+	{
+		"id": "feature1",
+		"title": "Unlimited Story Posting",
+		"basic": true,
+		"pro": true,
+		"business": true
+	},
+	{
+		"id": "feature2",
+		"title": "Unlimited Photo Upload",
+		"basic": true,
+		"pro": true,
+		"business": true
+	},
+	{
+		"id": "feature3",
+		"title": " Embedding Custom Content",
+		"pro": true,
+		"business": true
+	},
+	{
+		"id": "feature4",
+		"title": "Customize Metadata",
+		"pro": true,
+		"business": true
+	},
+	{
+		"id": "feature5",
+		"title": "Advanced Metrics",
+		"business": true
+	},
+	{
+		"id": "feature6",
+		"title": "Photo Downloads",
+		"business": true
+	},
+	{
+		"id": "feature7",
+		"title": "Search Engine Indexing",
+		"business": true
+	},
+	{
+		"id": "feature8",
+		"title": "Custom Analytics",
+		"business": true
+	}
+]

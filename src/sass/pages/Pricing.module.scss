@@ -2,13 +2,12 @@
 
 .pricing {
 	&__subscription {
-		padding: {
+		margin: {
 			top: 6.4rem;
 			left: 2.9rem;
 			right: 2.8rem;
 			bottom: 6.4rem;
 		}
-		margin-bottom: 6.4rem;
 
 		&--plans {
 			display: flex;
@@ -64,6 +63,28 @@
 				background-color: #000000;
 				@include mixins.transition();
 			}
+		}
+
+		&--prices {
+			display: flex;
+			flex-direction: column;
+			gap: 2.4rem;
+		}
+	}
+
+	&__features {
+		margin: {
+			left: 2.9rem;
+			right: 2.8rem;
+			bottom: 6.4rem;
+		}
+
+		&--title {
+			@include mixins.features-title(2.3rem);
+		}
+
+		&--line {
+			@include mixins.horizontal-line(#000);
 		}
 	}
 }

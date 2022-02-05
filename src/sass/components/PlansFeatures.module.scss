@@ -1,0 +1,31 @@
+@use "../abtracts/mixin" as mixins;
+
+.plans {
+	&-features {
+		&__title {
+			@include mixins.features-title(1.6rem);
+			margin-top: 2.35rem;
+		}
+
+		&__available {
+			margin-bottom: 2.4rem;
+			display: flex;
+			justify-content: space-between;
+			padding-right: 4.6rem;
+		}
+
+		&__line {
+			@include mixins.horizontal-line(#dfdfdf);
+		}
+	}
+
+	&-level {
+		&__title {
+			font-size: 1rem;
+			letter-spacing: 0.167rem;
+			font-weight: 700;
+			opacity: 0.5;
+			margin-bottom: 0.8rem;
+		}
+	}
+}
