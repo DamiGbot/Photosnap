@@ -61,11 +61,9 @@ const MainHeader = () => {
 				</svg>
 
 				<div
-					className={
-						isBurgerOpen
-							? `${classes["nav__menu-btn"]} ${classes.open}`
-							: classes["nav__menu-btn"]
-					}
+					className={`${classes["nav__menu-btn"]} ${
+						isBurgerOpen && classes.open
+					}`}
 					onClick={burgerOpenHandler}
 				>
 					<div className={classes["nav__menu-btn--burger_top"]}></div>
@@ -74,11 +72,9 @@ const MainHeader = () => {
 			</nav>
 
 			<div
-				className={
-					isBurgerOpen
-						? `${classes["main-header__menu-options"]} ${classes["menu-options"]}`
-						: classes["main-header__menu-options"]
-				}
+				className={`${classes["main-header__menu-options"]} ${
+					isBurgerOpen && classes["menu-options"]
+				}`}
 			>
 				{menuList.map((el) => (
 					<NavLink

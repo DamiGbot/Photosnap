@@ -10,15 +10,13 @@
 		}
 
 		&--plans {
+			max-width: 25.5rem;
+			margin: auto;
+			text-align: center;
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
-			padding: {
-				left: 3.1rem;
-				right: 3.2rem;
-			}
-			margin-bottom: 4rem;
-
+			padding-bottom: 4rem;
 			font-size: 1.8rem;
 			line-height: 2.5rem;
 			font-weight: 700;
