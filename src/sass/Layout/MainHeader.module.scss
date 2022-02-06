@@ -115,3 +115,40 @@
 .menu-options {
 	transform: translateY(0);
 }
+
+@include mixins.screen-tablet {
+	.main-header {
+		.nav {
+			padding: {
+				top: 1.6rem;
+				bottom: 1.6rem;
+				left: 3.9rem;
+				right: 4rem;
+			}
+		}
+
+		&__menu-options {
+			transform: translateY(0rem);
+			height: 100%;
+			width: auto;
+			padding: 0;
+
+			&__link-group {
+				display: flex;
+				gap: 3.7rem;
+			}
+
+			&__link {
+				margin-bottom: 0;
+				@include mixins.features-title;
+			}
+
+			&__button {
+				width: 15.8rem;
+				height: 4rem;
+				padding: 0;
+				@include mixins.features-title;
+			}
+		}
+	}
+}

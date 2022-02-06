@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import { NavLink, useLocation } from "react-router-dom";
 import Button from "../components/UI/Button";
+import useMediaQuery from "../hooks/useMediaQuery";
 
 import classes from "../sass/Layout/MainHeader.module.scss";
 
@@ -11,6 +12,7 @@ const MainHeader = () => {
 	const [isBurgerOpen, setIsBurgerOpen] = useState(false);
 	const [menuList, setMenuList] = useState(optionList);
 	const location = useLocation();
+	const screenTablet = useMediaQuery("(min-width: 768px)");
 
 	const { pathname } = location;
 
@@ -60,39 +62,66 @@ const MainHeader = () => {
 					</defs>
 				</svg>
 
-				<div
-					className={`${classes["nav__menu-btn"]} ${
-						isBurgerOpen && classes.open
-					}`}
-					onClick={burgerOpenHandler}
-				>
-					<div className={classes["nav__menu-btn--burger_top"]}></div>
-					<div className={classes["nav__menu-btn--burger_bottom"]}></div>
-				</div>
-			</nav>
-
-			<div
-				className={`${classes["main-header__menu-options"]} ${
-					isBurgerOpen && classes["menu-options"]
-				}`}
-			>
-				{menuList.map((el) => (
-					<NavLink
-						key={`${Math.random()}`}
-						to={`/${el}`}
-						className={classes["main-header__menu-options__link"]}
+				{!screenTablet && (
+					<div
+						className={`${classes["nav__menu-btn"]} ${
+							isBurgerOpen && classes.open
+						}`}
 						onClick={burgerOpenHandler}
 					>
-						{el.toUpperCase()}
-					</NavLink>
-				))}
+						<div className={classes["nav__menu-btn--burger_top"]}></div>
+						<div className={classes["nav__menu-btn--burger_bottom"]}></div>
+					</div>
+				)}
 
-				<div className={classes["main-header__menu-options__line"]}></div>
+				{screenTablet && (
+					<>
+						<div className={classes["main-header__menu-options"]}>
+							<div className={classes["main-header__menu-options__link-group"]}>
+								{menuList.map((el) => (
+									<NavLink
+										key={`${Math.random()}`}
+										to={`/${el}`}
+										className={classes["main-header__menu-options__link"]}
+										onClick={burgerOpenHandler}
+									>
+										{el.toUpperCase()}
+									</NavLink>
+								))}
+							</div>
+						</div>
 
-				<Button className={classes["main-header__menu-options__button"]}>
-					GET AN INVITE
-				</Button>
-			</div>
+						<Button className={classes["main-header__menu-options__button"]}>
+							GET AN INVITE
+						</Button>
+					</>
+				)}
+			</nav>
+
+			{!screenTablet && (
+				<div
+					className={`${classes["main-header__menu-options"]} ${
+						isBurgerOpen && classes["menu-options"]
+					}`}
+				>
+					{menuList.map((el) => (
+						<NavLink
+							key={`${Math.random()}`}
+							to={`/${el}`}
+							className={classes["main-header__menu-options__link"]}
+							onClick={burgerOpenHandler}
+						>
+							{el.toUpperCase()}
+						</NavLink>
+					))}
+
+					<div className={classes["main-header__menu-options__line"]}></div>
+
+					<Button className={classes["main-header__menu-options__button"]}>
+						GET AN INVITE
+					</Button>
+				</div>
+			)}
 		</header>
 	);
 };
