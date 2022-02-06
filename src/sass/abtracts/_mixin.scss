@@ -68,7 +68,7 @@
 	}
 }
 
-@mixin features-title($padding-bottom) {
+@mixin features-title($padding-bottom: auto) {
 	font-size: 1.2rem;
 	padding-bottom: $padding-bottom;
 	letter-spacing: 0.2rem;
@@ -77,4 +77,22 @@
 
 @mixin horizontal-line($color) {
 	border-top: 0.01rem solid $color;
+}
+
+@mixin screen-tablet {
+	@media only screen and (min-width: 768px) {
+		@content;
+	}
+}
+
+@mixin screen-laptop {
+	@media only screen and (min-width: 1024px) {
+		@content;
+	}
+}
+
+@mixin screen-desktop {
+	@media only screen and (min-width: 1600px) {
+		@content;
+	}
 }
