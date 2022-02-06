@@ -1,3 +1,5 @@
+@use "../../abtracts/mixin" as mixins;
+
 .story {
 	padding: 23.6rem 3.3rem 4rem;
 	color: white;
@@ -47,3 +49,21 @@
 		}
 	}
 }
+
+@include mixins.screen-tablet {
+	.story {
+		padding: {
+			top: 36.1rem;
+			bottom: 4rem;
+			left: 4.322rem;
+			right: 4.278rem;
+		}
+		flex-basis: 50%;
+	}
+}
+
+@include mixins.screen-laptop {
+	.story {
+		flex-basis: 25%;
+	}
+} ;

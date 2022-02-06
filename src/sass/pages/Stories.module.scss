@@ -15,3 +15,12 @@
 		}
 	}
 }
+
+@include mixins.screen-tablet {
+	.stories {
+		&__posts {
+			display: flex;
+			flex-wrap: wrap;
+		}
+	}
+}

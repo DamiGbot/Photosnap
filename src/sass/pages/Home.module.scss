@@ -53,3 +53,16 @@
 		padding: 8rem 3.3rem;
 	}
 }
+
+@include mixins.screen-tablet {
+	.home {
+		&__posts {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		&__features {
+			padding: 12rem 15.5rem;
+		}
+	}
+}

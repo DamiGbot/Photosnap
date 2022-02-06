@@ -10,3 +10,14 @@
 		}
 	}
 }
+
+@include mixins.screen-tablet {
+	.feature {
+		padding: 11.2rem 38.5rem;
+		&__features {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 1.1rem;
+		}
+	}
+}

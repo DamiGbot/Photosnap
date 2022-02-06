@@ -3,7 +3,7 @@ import ReadStory from "../components/ReadStory";
 
 import classes from "../sass/pages/Stories.module.scss";
 
-import data from "../dev-data/assets/stories/read-story-full.json";
+import data from "../dev-data/assets/stories/read-story-full-mobile.json";
 import HeroImage from "../components/Hero-box/HeroImage";
 import HeroContent from "../components/Hero-box/HeroContent";
 
@@ -35,7 +35,7 @@ const Stories = () => {
 				/>
 			</section>
 
-			<section>
+			<section className={classes["stories__posts"]}>
 				<ReadStory list={data} />
 			</section>
 		</main>

@@ -7,11 +7,12 @@ const SomeFeatures = (props) => {
 		<>
 			{props.list.map((el) => (
 				<div className={classes.features} key={el.id}>
-					<img
-						alt=""
-						src={require(`../dev-data/assets/features/${el.svg}`)}
-						className={classes["features__svg"]}
-					/>
+					<div className={classes["features__svg"]}>
+						<img
+							alt=""
+							src={require(`../dev-data/assets/features/${el.svg}`)}
+						/>
+					</div>
 
 					<h3>{el.title}</h3>
 					<p>{el.content}</p>

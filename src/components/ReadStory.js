@@ -1,10 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import useMediaQuery from "../hooks/useMediaQuery";
 
 import classes from "../sass/components/Stories/ReadStory.module.scss";
 import Arrow from "./UI/Arrow";
 
 const ReadStory = (props) => {
+	const match = useMediaQuery("(min-width: 768px)");
+	console.log(match);
+
 	return (
 		<React.Fragment>
 			{props.list.map((el) => (
@@ -12,8 +16,12 @@ const ReadStory = (props) => {
 					key={el.id}
 					className={classes.story}
 					style={{
-						background: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)), url(${require(`../dev-data/assets/stories/mobile/${el.images}`)}) no-repeat 50%`,
+						backgroundImage: `url(${require(`../dev-data/assets/stories/${
+							match ? "desktop" : "mobile"
+						}/${el.images}`)})`,
+						backgroundRepeat: "no-repeat",
 						backgroundSize: "cover",
+						backgroundPosition: "50%",
 					}}
 				>
 					{el.date && <p className={classes["story_date"]}>{el.date}</p>}

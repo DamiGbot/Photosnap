@@ -1,3 +1,5 @@
+@use "../../abtracts/mixin" as mixins;
+
 .features {
 	text-align: center;
 	line-height: 2.5rem;
@@ -8,6 +10,7 @@
 
 	&__svg {
 		margin-bottom: 4.8rem;
+		height: 7.2rem;
 	}
 
 	h3 {
@@ -19,5 +22,15 @@
 	p {
 		font-size: 1.5rem;
 		opacity: 0.65;
+	}
+}
+
+@include mixins.screen-tablet {
+	.features {
+		flex-basis: 49.2%;
+
+		&:not(:last-child) {
+			margin-bottom: 7.2rem;
+		}
 	}
 }
