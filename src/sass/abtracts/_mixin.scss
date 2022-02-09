@@ -55,10 +55,9 @@
 	top: 0;
 }
 
-@mixin background-image-above-footer {
+@mixin background-image-above-footer($url) {
 	position: relative;
-	background: url("../../dev-data/assets/shared/mobile/bg-beta.jpg") no-repeat
-		50%;
+	background: url($url) no-repeat 50%;
 	background-size: cover;
 	padding: {
 		top: 6.4rem;

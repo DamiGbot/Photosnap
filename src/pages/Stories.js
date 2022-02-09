@@ -9,7 +9,7 @@ import HeroContent from "../components/Hero-box/HeroContent";
 import useMediaQuery from "../hooks/useMediaQuery";
 
 const Stories = () => {
-	const match = useMediaQuery("(min-width: 768px)");
+	const screenTablet = useMediaQuery("(min-width: 768px)");
 
 	useEffect(() => {
 		document.title = "Photosnap | Stories";
@@ -19,7 +19,7 @@ const Stories = () => {
 	return (
 		<main className={classes.stories}>
 			<section className={classes["stories-section1"]}>
-				{!match && (
+				{!screenTablet && (
 					<HeroImage
 						image={`stories/mobile/moon-of-appalacia.jpg`}
 						className={classes["stories-section1__hero-image"]}

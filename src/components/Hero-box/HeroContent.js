@@ -14,9 +14,11 @@ const HeroContent = (props) => {
 				</p>
 			)}
 
-			<h3 className={classes["hero-content__content--title"]}>
-				{`${props.title}`.toUpperCase()}
-			</h3>
+			{props.title && (
+				<h3 className={classes["hero-content__content--title"]}>
+					{`${props.title}`.toUpperCase()}
+				</h3>
+			)}
 
 			{props.date && props.author && (
 				<p className={classes["hero-content__content--author"]}>
@@ -27,7 +29,11 @@ const HeroContent = (props) => {
 				</p>
 			)}
 
-			<p className={classes["hero-content__content--body"]}>{props.content}</p>
+			{props.content && (
+				<p className={classes["hero-content__content--body"]}>
+					{props.content}
+				</p>
+			)}
 
 			{props.action && (
 				<div className={classes["hero-content__content__actions"]}>
