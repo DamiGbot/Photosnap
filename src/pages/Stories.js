@@ -10,7 +10,6 @@ import useMediaQuery from "../hooks/useMediaQuery";
 
 const Stories = () => {
 	const match = useMediaQuery("(min-width: 768px)");
-	console.log(match);
 
 	useEffect(() => {
 		document.title = "Photosnap | Stories";
