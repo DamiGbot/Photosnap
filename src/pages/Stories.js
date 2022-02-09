@@ -6,8 +6,12 @@ import classes from "../sass/pages/Stories.module.scss";
 import data from "../dev-data/assets/stories/read-story-full-mobile.json";
 import HeroImage from "../components/Hero-box/HeroImage";
 import HeroContent from "../components/Hero-box/HeroContent";
+import useMediaQuery from "../hooks/useMediaQuery";
 
 const Stories = () => {
+	const match = useMediaQuery("(min-width: 768px)");
+	console.log(match);
+
 	useEffect(() => {
 		document.title = "Photosnap | Stories";
 		window.scrollTo(0, 0);
@@ -16,10 +20,12 @@ const Stories = () => {
 	return (
 		<main className={classes.stories}>
 			<section className={classes["stories-section1"]}>
-				<HeroImage
-					image={`stories/mobile/moon-of-appalacia.jpg`}
-					className={classes["stories-section1__hero-image"]}
-				/>
+				{!match && (
+					<HeroImage
+						image={`stories/mobile/moon-of-appalacia.jpg`}
+						className={classes["stories-section1__hero-image"]}
+					/>
+				)}
 
 				<HeroContent
 					className={classes["stories-section1__content"]}

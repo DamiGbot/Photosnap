@@ -65,3 +65,19 @@
 		}
 	}
 }
+
+@include mixins.screen-tablet {
+	.hero-content {
+		&__content {
+			&--award {
+				margin-bottom: 2.4rem;
+			}
+
+			&--title {
+				font-size: 4rem;
+				line-height: 4.8rem;
+				letter-spacing: 0.417rem;
+			}
+		}
+	}
+}

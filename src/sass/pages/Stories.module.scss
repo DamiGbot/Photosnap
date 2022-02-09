@@ -18,6 +18,21 @@
 
 @include mixins.screen-tablet {
 	.stories {
+		&-section1 {
+			&__content {
+				background: url("../../dev-data/assets/stories/tablet/moon-of-appalacia.jpg")
+					no-repeat 50%;
+				background-size: cover;
+				height: 65rem;
+
+				padding: {
+					left: 5.078%;
+					top: 12.2rem;
+					right: 44.53%;
+				}
+			}
+		}
+
 		&__posts {
 			display: flex;
 			flex-wrap: wrap;
