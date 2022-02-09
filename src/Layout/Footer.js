@@ -57,6 +57,7 @@ const Footer = () => {
 					{socialMedia.map((el) => (
 						<Link
 							to={"#"}
+							key={Math.random().toString()}
 							className={`${classes["footer__logo--social-media__icon"]} ${classes[el]}`}
 						></Link>
 					))}
@@ -65,7 +66,11 @@ const Footer = () => {
 
 			<div className={classes["footer__link"]}>
 				{optionList.map((el) => (
-					<Link to={`/${el}`} className={classes["footer__link--options"]}>
+					<Link
+						to={`/${el}`}
+						key={Math.random().toString()}
+						className={classes["footer__link--options"]}
+					>
 						{el}
 					</Link>
 				))}
