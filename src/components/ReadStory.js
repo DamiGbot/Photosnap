@@ -7,7 +7,6 @@ import Arrow from "./UI/Arrow";
 
 const ReadStory = (props) => {
 	const match = useMediaQuery("(min-width: 768px)");
-	console.log(match);
 
 	return (
 		<React.Fragment>
