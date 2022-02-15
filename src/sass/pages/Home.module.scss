@@ -64,5 +64,51 @@
 		&__features {
 			padding: 12rem 20.24%;
 		}
+
+		&__group {
+			display: flex;
+			height: 60rem;
+
+			&-dark {
+				height: 65rem;
+			}
+		}
+
+		&__invert {
+			flex-direction: row-reverse;
+		}
+
+		&__stories {
+			width: 64.454%;
+			height: 100%;
+			margin: {
+				top: auto;
+				bottom: auto;
+			}
+
+			padding: {
+				top: 17.3rem;
+				left: 5.4rem;
+				right: 5.4rem;
+			}
+
+			&-dark {
+				&::before {
+					@include mixins.before-line-gradient;
+					left: 0;
+					top: 27%;
+					width: 0.6rem;
+					height: 42%;
+				}
+			}
+		}
+
+		&__afterImage {
+			width: 35.546%;
+			// height: 100%;
+			background-repeat: no-repeat;
+			background-position: 50%;
+			background-size: cover;
+		}
 	}
 }

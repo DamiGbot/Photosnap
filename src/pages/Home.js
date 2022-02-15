@@ -10,8 +10,11 @@ import classes from "../sass/pages/Home.module.scss";
 import homeSectionData from "../dev-data/assets/home/Section1_data.json";
 import readStoryData from "../dev-data/assets/home/read-story.json";
 import someFeaturesData from "../dev-data/assets/home/some_features.json";
+import useMediaQuery from "../hooks/useMediaQuery";
 
 const Home = () => {
+	const screenTablet = useMediaQuery("(min-width: 768px)");
+
 	useEffect(() => {
 		document.title = "Photosnap | Home";
 		window.scrollTo(0, 0);
@@ -20,14 +23,21 @@ const Home = () => {
 	const homeSection = useMemo(
 		() =>
 			homeSectionData.map((el) => (
-				<React.Fragment key={el.Id}>
-					<HeroImage
-						dark={el.Dark}
-						image={`home/mobile/${el.image}`}
-						className={
-							el.Dark ? classes["home__hero-image"] : classes["home__images"]
-						}
-					/>
+				<div
+					key={el.Id}
+					className={`${classes["home__group"]} ${
+						el.second && classes["home__invert"]
+					} ${el.Dark && classes["home__group-dark"]}`}
+				>
+					{!screenTablet && (
+						<HeroImage
+							dark={el.Dark}
+							image={`home/mobile/${el.image}`}
+							className={
+								el.Dark ? classes["home__hero-image"] : classes["home__images"]
+							}
+						/>
+					)}
 
 					<HeroContent
 						className={`${classes["home__stories"]} 
@@ -39,9 +49,19 @@ const Home = () => {
 							!el.Dark && classes["home__stories-white--action_arrow"]
 						} `}
 					/>
-				</React.Fragment>
+
+					{screenTablet && (
+						<div
+							className={classes["home__afterImage"]}
+							style={{
+								backgroundImage: `url(${require(`../dev-data/assets/home/tablet/${el.image}`)})`,
+								// backgroundColor: "red",/
+							}}
+						></div>
+					)}
+				</div>
 			)),
-		[]
+		[screenTablet]
 	);
 
 	return (
