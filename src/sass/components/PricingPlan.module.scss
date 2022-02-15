@@ -1,3 +1,5 @@
+@use "../abtracts/mixin" as mixins;
+
 @mixin paragraph-style {
 	font-size: 1.5rem;
 	opacity: 0.6;
@@ -20,46 +22,6 @@
 	text-align: center;
 
 	background-color: #f5f5f5;
-
-	.title {
-		font-size: 2.4rem;
-		font-weight: 700;
-		line-height: 2.5rem;
-		margin-bottom: 1.6rem;
-	}
-
-	.body,
-	.period {
-		@include paragraph-style();
-	}
-
-	.amount {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 4rem;
-		letter-spacing: 0.417rem;
-	}
-
-	.button {
-		padding: 1.2rem;
-		width: 100%;
-		font-weight: 700;
-		letter-spacing: 0.2rem;
-		cursor: pointer;
-		border: none;
-		outline: none;
-
-		background-color: #000;
-		color: white;
-
-		&:hover {
-			transform: scale(1.01);
-		}
-
-		&:active {
-			transform: scale(0.99);
-		}
-	}
 
 	&-dark {
 		position: relative;
@@ -90,5 +52,84 @@
 			background-color: white;
 			color: #000;
 		}
+	}
+}
+
+.title {
+	font-size: 2.4rem;
+	font-weight: 700;
+	line-height: 2.5rem;
+	margin-bottom: 1.6rem;
+}
+
+.body,
+.period {
+	@include paragraph-style();
+}
+
+.amount {
+	font-size: 4rem;
+	font-weight: 700;
+	line-height: 4rem;
+	letter-spacing: 0.417rem;
+}
+
+.button {
+	padding: 1.2rem;
+	width: 100%;
+	font-weight: 700;
+	letter-spacing: 0.2rem;
+	cursor: pointer;
+	border: none;
+	outline: none;
+
+	background-color: #000;
+	color: white;
+
+	&:hover {
+		transform: scale(1.01);
+	}
+
+	&:active {
+		transform: scale(0.99);
+	}
+}
+
+@include mixins.screen-tablet {
+	.plans {
+		text-align: left;
+		padding: {
+			left: 4rem;
+			right: 4rem;
+			top: 3rem;
+			bottom: 3rem;
+		}
+		background-color: #dfdfdf;
+		display: flex;
+
+		&-dark {
+			background-color: #000;
+			color: white;
+
+			&::before {
+				@include mixins.before-line-gradient;
+				left: 0;
+				width: 0.6rem;
+				height: 100%;
+			}
+		}
+	}
+
+	.right {
+		text-align: right;
+		flex-basis: 60%;
+	}
+
+	.body {
+		width: 80%;
+	}
+
+	.button {
+		width: 80%;
 	}
 }
