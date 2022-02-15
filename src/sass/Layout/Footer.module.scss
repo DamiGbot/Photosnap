@@ -136,7 +136,7 @@
 			position: absolute;
 			left: 3.95rem;
 			top: 11.2rem;
-			gap: 2.6rem;
+			// gap: 2.6rem;
 		}
 
 		&__actions {
@@ -144,6 +144,32 @@
 
 			&--copyright {
 				margin-top: 12rem;
+			}
+		}
+	}
+}
+
+@include mixins.screen-laptop {
+	@include mixins.screen-tablet {
+		.footer {
+			padding: {
+				left: 17.1rem;
+				right: 16.5rem;
+			}
+
+			&__link {
+				flex-direction: column;
+				justify-content: space-between;
+				left: 45rem;
+				top: 6.4rem;
+			}
+
+			&__actions {
+				text-align: right;
+
+				&--copyright {
+					margin-top: 8.6rem;
+				}
 			}
 		}
 	}
