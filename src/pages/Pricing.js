@@ -8,9 +8,11 @@ import classes from "../sass/pages/Pricing.module.scss";
 
 import pricingPlanData from "../dev-data/assets/pricing/pricingPlan.json";
 import featuresAvailableData from "../dev-data/assets/pricing/featuresAvailable.json";
+import useMediaQuery from "../hooks/useMediaQuery";
 
 const Pricing = () => {
 	const [isYearly, setIsYearly] = useState(false);
+	const screenTablet = useMediaQuery("(min-width: 768px)");
 
 	useEffect(() => {
 		document.title = "Photosnap | Pricing";
@@ -39,6 +41,7 @@ const Pricing = () => {
 			basicAvailable={feature.basic}
 			proAvailable={feature.pro}
 			businessAvailable={feature.business}
+			tablet={screenTablet}
 		/>
 	));
 
@@ -91,9 +94,26 @@ const Pricing = () => {
 			</section>
 
 			<section className={classes["pricing__features"]}>
-				<h3 className={classes["pricing__features--title"]}>
-					{"The features".toUpperCase()}
-				</h3>
+				{screenTablet && (
+					<h2 className={classes["pricing__features--bold"]}>COMPARE</h2>
+				)}
+
+				<div className={classes["pricing__features--group"]}>
+					<h3 className={classes["pricing__features--group-title"]}>
+						{"The features".toUpperCase()}
+					</h3>
+
+					{screenTablet && (
+						<div className={classes["pricing__features--group-sub"]}>
+							{["basic", "pro", "business"].map((el) => (
+								<h3 className={classes["pricing__features--group-title"]}>
+									{el.toUpperCase()}
+								</h3>
+							))}
+						</div>
+					)}
+				</div>
+
 				<div className={classes["pricing__features--line"]}></div>
 
 				<div>{featuresAvailable}</div>

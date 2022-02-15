@@ -29,3 +29,36 @@
 		}
 	}
 }
+
+@include mixins.screen-tablet {
+	.plans {
+		&-features {
+			display: flex;
+			justify-content: space-between;
+
+			&__title {
+				flex-basis: 40%;
+				margin-left: 2.4rem;
+				padding-bottom: 2.35rem;
+			}
+
+			&__available {
+				flex-basis: 60%;
+				justify-content: space-around;
+				align-items: center;
+				margin-bottom: 0;
+				padding-right: 0;
+			}
+		}
+
+		&-level {
+			&__title {
+				display: none;
+			}
+
+			&__svg {
+				width: 1.8rem;
+			}
+		}
+	}
+}

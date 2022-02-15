@@ -71,18 +71,65 @@
 	}
 
 	&__features {
+		max-width: 73.1rem;
 		margin: {
 			left: 2.9rem;
 			right: 2.8rem;
 			bottom: 6.4rem;
 		}
 
-		&--title {
-			@include mixins.features-title(2.3rem);
+		&--bold {
+			font-size: 4rem;
+			text-align: center;
+			margin-bottom: 6.4rem;
+			line-height: 4.8rem;
+			letter-spacing: 0.417rem;
+			font-weight: 700;
+		}
+
+		&--group {
+			&-title {
+				@include mixins.features-title(2.3rem);
+			}
+
+			&-sub {
+				display: flex;
+				flex-basis: 51.5%;
+				justify-content: space-between;
+			}
 		}
 
 		&--line {
 			@include mixins.horizontal-line(#000);
+		}
+	}
+}
+
+@include mixins.screen-tablet {
+	.pricing {
+		&__subscription {
+			margin: {
+				left: 3.95rem;
+				right: 3.95rem;
+				bottom: 11.2rem;
+			}
+		}
+
+		&__features {
+			margin: {
+				left: auto;
+				right: auto;
+				bottom: 11.2rem;
+			}
+
+			&--group {
+				display: flex;
+				margin: {
+					left: 2.4rem;
+					right: 2.4rem;
+				}
+				justify-content: space-between;
+			}
 		}
 	}
 }
