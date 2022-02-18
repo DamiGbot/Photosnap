@@ -34,3 +34,10 @@
 		}
 	}
 }
+
+@include mixins.screen-tablet {
+	.features {
+		flex-basis: 30%;
+		margin-bottom: 10.4rem;
+	}
+}

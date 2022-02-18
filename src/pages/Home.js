@@ -14,6 +14,7 @@ import useMediaQuery from "../hooks/useMediaQuery";
 
 const Home = () => {
 	const screenTablet = useMediaQuery("(min-width: 768px)");
+	const screenLaptop = useMediaQuery("(min-width: 1024px)");
 
 	useEffect(() => {
 		document.title = "Photosnap | Home";
@@ -50,7 +51,7 @@ const Home = () => {
 						} `}
 					/>
 
-					{screenTablet && (
+					{screenTablet && !screenLaptop && (
 						<div
 							className={classes["home__afterImage"]}
 							style={{
@@ -59,9 +60,18 @@ const Home = () => {
 							}}
 						></div>
 					)}
+
+					{screenLaptop && (
+						<div
+							className={classes["home__afterImage"]}
+							style={{
+								backgroundImage: `url(${require(`../dev-data/assets/home/desktop/${el.image}`)})`,
+							}}
+						></div>
+					)}
 				</div>
 			)),
-		[screenTablet]
+		[screenTablet, screenLaptop]
 	);
 
 	return (

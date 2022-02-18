@@ -105,10 +105,45 @@
 
 		&__afterImage {
 			width: 35.546%;
-			// height: 100%;
 			background-repeat: no-repeat;
 			background-position: 50%;
 			background-size: cover;
+		}
+	}
+}
+
+@include mixins.screen-laptop {
+	.home {
+		&__stories {
+			width: 42.36%;
+			padding: {
+				left: 11.2rem;
+				right: 11.2rem;
+			}
+
+			&-dark {
+				&::before {
+					height: 38%;
+				}
+			}
+		}
+
+		&__afterImage {
+			width: 57.64%;
+		}
+
+		&__features {
+			display: flex;
+			justify-content: space-between;
+			padding: {
+				left: 16.5rem;
+				right: 16.5rem;
+				bottom: 1.6rem;
+			}
+
+			div {
+				margin-bottom: 0;
+			}
 		}
 	}
 }
