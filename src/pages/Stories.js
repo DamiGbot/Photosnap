@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import ReadStory from "../components/ReadStory";
 
 import classes from "../sass/pages/Stories.module.scss";

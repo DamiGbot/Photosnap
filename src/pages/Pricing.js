@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import FeaturePricingLayout from "../components/FeaturePricingLayout";
 import PricingPlan from "../components/PricingPlan";
@@ -68,9 +68,9 @@ const Pricing = () => {
 					</p>
 					<div
 						onClick={switchPlanHandler}
-						className={`${classes["pricing__subscription--plans-toggle"]} ${
-							isYearly && classes["pricing__subscription--plans__yearlyBg"]
-						}`}
+						className={`${
+							classes["pricing__subscription--plans-toggle"]
+						} ${isYearly && classes["pricing__subscription--plans__yearlyBg"]}`}
 					>
 						<div
 							className={`${

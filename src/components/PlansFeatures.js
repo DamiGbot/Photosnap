@@ -1,3 +1,4 @@
+import React from "react";
 import classes from "../sass/components/PlansFeatures.module.scss";
 
 const PlanLevel = (props) => {
