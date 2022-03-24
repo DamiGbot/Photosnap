@@ -49,6 +49,7 @@ const Pricing = () => {
 		<FeaturePricingLayout
 			image={`pricing/mobile/hero.jpg`}
 			afterImage={`pricing/tablet/hero.jpg`}
+			laptopImage={`pricing/desktop/hero.jpg`}
 			title={"Pricing"}
 			content={
 				" Create a your stories, Photosnap is a platform for photographers and visual storytellers. It’s the simple way to create and share your photos."

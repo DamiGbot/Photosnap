@@ -6,6 +6,7 @@ import useMediaQuery from "../hooks/useMediaQuery";
 
 const FeaturePricingLayout = (props) => {
 	const screenTablet = useMediaQuery("(min-width: 768px)");
+	const screenLaptop = useMediaQuery("(min-width: 1024px)");
 
 	return (
 		<main className={classes["layout"]}>
@@ -23,11 +24,20 @@ const FeaturePricingLayout = (props) => {
 					content={props.content}
 				/>
 
-				{screenTablet && (
+				{screenTablet && !screenLaptop && (
 					<div
 						className={classes["layout-section1__afterImage"]}
 						style={{
 							backgroundImage: `url(${require(`../dev-data/assets/${props.afterImage}`)})`,
+						}}
+					></div>
+				)}
+
+				{screenLaptop && (
+					<div
+						className={classes["layout-section1__afterImage"]}
+						style={{
+							backgroundImage: `url(${require(`../dev-data/assets/${props.laptopImage}`)})`,
 						}}
 					></div>
 				)}

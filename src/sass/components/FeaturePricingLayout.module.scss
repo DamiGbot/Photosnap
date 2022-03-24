@@ -64,7 +64,6 @@
 					left: 0;
 					top: 36.5%;
 					width: 0.6rem;
-					// height: 14.4rem;
 					height: 25%;
 				}
 			}
@@ -106,6 +105,16 @@
 				left: 0;
 				width: 0.6rem;
 				height: 100%;
+			}
+		}
+	}
+}
+
+@include mixins.screen-laptop {
+	.layout {
+		&-section1 {
+			&__afterImage {
+				width: 77.64%;
 			}
 		}
 	}
