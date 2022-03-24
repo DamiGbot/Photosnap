@@ -1,3 +1,4 @@
+import React from "react";
 import HeroContent from "./Hero-box/HeroContent";
 import HeroImage from "./Hero-box/HeroImage";
 
