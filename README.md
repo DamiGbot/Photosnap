@@ -12,7 +12,6 @@ The user should be able to:
 ## Languages and Tools
 
 - React
-- Redux
 - React Router
 - Javascript
 - Scss
